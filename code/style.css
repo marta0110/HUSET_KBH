@@ -1,5 +1,76 @@
+body, html {
+    height: 100%;
+}
+
+.header { 
+    /* The image used */
+    background-image: url("pictures/app_music.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.circle{
+     
+    display: grid;
+  grid-template-columns: 10% 75% 15%;
+}
+ 
+.circle .menu_arrow{
+     margin-top: 1em;
+    margin-left: 1em;
+    z-index: 10;
+}
+.circle .huset{
+   margin-top: 1em;
+    margin-right: 1em;
+     justify-self: end;
+}
+
+.circle .gif{
+    margin-top: 1em;
+      justify-self: end;
+    
+}
+
+.categories_app{
+     display: grid;
+  grid-template-columns: 1fr;
+     padding-top: 3em;
+    
+}
+
+
+.categories_app .category_gradient{
+  padding-top: 1em;
+    padding-bottom: 1em;
+     justify-self: end;
+    
+}
+
+.categories_app .menu_arrow_category{
+     display: grid;
+  grid-template-columns: 40% 20% 40%;
+      margin-top:-5em;
+     
+}
+.header .circle .gif{
+       background-image: url("pictures/giphy.gif");
+
+   height:100%;
+    /* Center and scale the image nicely */
+    background-position: center
+    background-repeat: no-repeat;
+    background-size: auto;
+}
 .concert{
-    border: 1px solid black;
+    border: 1px solid red;
     padding: 1.5em;
 }
 

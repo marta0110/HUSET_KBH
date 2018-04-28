@@ -45,6 +45,8 @@ html {
     cursor: pointer;
     
 }
+
+
 .header_intro .huset {
     margin-top: 1em;
     margin-right: 1em;
@@ -64,7 +66,7 @@ html {
 .categories_app {
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 2em;
+    padding-top: 6em;
 }
 
 
@@ -74,11 +76,58 @@ html {
     justify-self: end;
 
 }
+.menu_arrow_category .music{
+    background-image: url(pictures/music.png); 
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2;
+   
+}
+
+.menu_arrow_category img{
+    justify-self:center;
+    margin-top:-0.5vh;
+}
+.menu_arrow_category .films{
+    background-image: url(pictures/films.png); 
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2;
+   
+}
+
+.menu_arrow_category .films:hover{
+     background-image: url(pictures/films_hover.png);
+  
+    
+}
+.menu_arrow_category .music:hover{
+     background-image: url(pictures/music_hover.png);
+    
+    
+}
+.categories_app .category_gradient{
+    background-image: url(pictures/menu_button.png); 
+    width:65vw;
+    height:14vh;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2;
+    cursor: pointer;
+    align-self: end;
+}
+.categories_app .category_gradient:hover{
+    background-image: url(pictures/menu_button_hover.png); width:65vw;
+    height:14vh;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+}
 
 .categories_app .menu_arrow_category {
     display: grid;
     grid-template-columns: 40% 20% 40%;
-    margin-top: -6em;
+    margin-top: -8.5em;
 
 }
 
@@ -110,25 +159,27 @@ html {
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 30px 10px 10px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     display: block;
     transition: 0.3s;
-    font-family: "Avenir Next Ultra Light"
+    font-size:100;
+    font-family:"Avenir Next"; "Avenir Regular"; "sans-serif";
+    letter-spacing: 1px;
 
 }
 
 .sidenav a:hover{
-    color: #f1f1f1;
+    color: deeppink;
 }
 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 40px;
     margin-left: 50px;
 }
 

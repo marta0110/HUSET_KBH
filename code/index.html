@@ -2,7 +2,7 @@
 <html lang="">
 
 <head>
-
+   
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_package/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_package/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_package/favicon-16x16.png">
@@ -22,9 +22,9 @@
    
         <div class="header_intro">
 
-            <div onmouseover="openNav()"
-                
-             class="menu_arrow"></div>
+            <div class="menu_arrow" onmouseover="openNav()"           ></div>
+             
+           
 
             <img class="gif" src="pictures/gif_ps.gif" alt="circle" style="width:250px;height:250px;">
 
@@ -32,44 +32,32 @@
         </div>
         
         
-  <div id="mySidenav" class="sidenav">
+  <div  onmouseleave="closeNav()" id="mySidenav" class="sidenav">
+ 
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">Events</a>
   <a href="#">About</a>
   <a href="#">Contact</a>
 </div>
 
-        <div class="categories_app">
+<div class="categories_app">
 
-            <div class="category_gradient">
+    <div class="category_gradient">
+    </div>
 
+<div class="menu_arrow_category">
+      <div></div>
+       <img src="pictures/arrow_categories.png" alt="arrow" style="width:30px;height:auto;">
+       <div class="music"> </div>
+     
+</div>
+     <div class="category_gradient">
+     </div>
 
-                <img src="pictures/menu_button.png" alt="circle" style="width:65vw ;height:12vh">
-
-            </div>
-
-            <div class="menu_arrow_category">
-                <div></div>
-                <img src="pictures/arrow_categories.png" alt="arrow" style="width:30px;height:auto;">
-
-
-                <img class="music" src="pictures/music.png" alt="circle">
-
-
-
-            </div>
-            <div class="category_gradient">
-
-                <img src="pictures/menu_button.png" alt="circle" style="width:65vw ;height:12vh">
-
-            </div>
-
-            <div class="menu_arrow_category">
-                <div></div>
-                 <img src="pictures/arrow_categories.png" alt="arrow" style="width:30px;height:auto;">
-
-
-                <img class="music" src="pictures/films.png" alt="circle">
+      <div class="menu_arrow_category">
+        <div></div>
+         <img src="pictures/arrow_categories.png" alt="arrow" style="width:30px;height:auto;">
+             <div class="films"> </div>
             </div>
 
         </div>

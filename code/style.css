@@ -1,156 +1,239 @@
-body, html {
-    height: 100%;
+body,
+html {
+    height: 100vh;
+    width: 100vw;
 }
 
-.header { 
-    /* The image used */
+/* intro */
+.header {
     background-image: url("pictures/app_music.png");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
+    height: 100vh;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    top: -1em;
+    left: -1em;
+
 }
 
-.circle{
-     
+.header_intro {
+
     display: grid;
-  grid-template-columns: 10% 75% 15%;
+    grid-template-columns: 10% 50% 20%;
 }
- 
-.circle .menu_arrow{
+
+.header_intro .menu_arrow {
+     z-index: 10;
+    background-image: url(pictures/menu_up.png); 
+    width:60px;
+    height:auto;
+    background-repeat: no-repeat;
      margin-top: 1em;
     margin-left: 1em;
-    z-index: 10;
-}
-.circle .huset{
-   margin-top: 1em;
-    margin-right: 1em;
-     justify-self: end;
-}
-
-.circle .gif{
-    margin-top: 1em;
-      justify-self: end;
-    
-}
-
-.categories_app{
-     display: grid;
-  grid-template-columns: 1fr;
-     padding-top: 3em;
-    
+    transition: 0.2s ;
 }
 
 
-.categories_app .category_gradient{
-  padding-top: 1em;
-    padding-bottom: 1em;
-     justify-self: end;
-    
-}
-
-.categories_app .menu_arrow_category{
-     display: grid;
-  grid-template-columns: 40% 20% 40%;
-      margin-top:-5em;
-     
-}
-.header .circle .gif{
-       background-image: url("pictures/giphy.gif");
-
-   height:100%;
-    /* Center and scale the image nicely */
-    background-position: center
+.header_intro .menu_arrow:hover{
+     z-index: 10;
+    background-image: url(pictures/menu_down.png); 
+    width:120px;
+    height:auto;
     background-repeat: no-repeat;
-    background-size: auto;
+    margin-top: 2em;
+    cursor: pointer;
+    
 }
-.concert{
+.header_intro .huset {
+    margin-top: 1em;
+    margin-right: 1em;
+    justify-self: start;
+    cursor: pointer;
+    position: absolute;
+    
+}
+
+.header_intro .gif {
+    margin-top: 1em;
+    margin-left: 10vw;
+    
+    
+}
+
+.categories_app {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 2em;
+}
+
+
+.categories_app .category_gradient {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    justify-self: end;
+
+}
+
+.categories_app .menu_arrow_category {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    margin-top: -6em;
+
+}
+
+.header .circle .gif {
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+
+
+/*SIDE NAV*/
+
+
+
+.sidenav {
+    height: 80%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 20%;
+    left: 0;
+    background: linear-gradient(#6BCDE7, #CDDCE2);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+   
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: "Avenir Next Ultra Light"
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* APP */
+.concert {
     border: 1px solid red;
     padding: 1.5em;
 }
 
-.concert .color{
-    width:100px;
-    height:100px;
+.concert .color {
+    width: 100px;
+    height: 100px;
     background-color: aquamarine;
 }
 
 .appbar {
-  width: 100vw;
-  height: var(--header-height);
-  top: 0;
-  left:0;
+    width: 100vw;
+    height: var(--header-height);
+    top: 0;
+    left: 0;
     z-index: 10;
 }
-.appbar, .menu {
-  background: teal;
-  padding: 1em;
-  position: fixed;
-}
+
+.appbar,
 .menu {
-  top: var(--header-height);
-  height: 100vh;
-  width: 100vw;
-  transition: all 0.3s 0.3s;
-  color: white;
-    top:3em;
+    background: teal;
+    padding: 1em;
+    position: fixed;
 }
 
-.menu ul li{
+.menu {
+    top: var(--header-height);
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.3s 0.3s;
+    color: white;
+    top: 3em;
+}
+
+.menu ul li {
     font-size: 2em;
 }
+
 .menu.hidden {
-  transform: translateX(-120vw);
+    transform: translateX(-120vw);
 }
+
 .container-fluid {
-  margin: 1em;
-  margin-top: var(--header-height);
+    margin: 1em;
+    margin-top: var(--header-height);
 }
+
 .menuIcon {
-  height: 30px;
-  margin-top: 10px;
-  margin-left: 12px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 12px;
 }
+
 .menuIcon rect {
-  fill: white;
-  transition: all 0.6s;
+    fill: white;
+    transition: all 0.6s;
 }
-.menuIcon rect:nth-child(1){
-  transform-origin: left top;
+
+.menuIcon rect:nth-child(1) {
+    transform-origin: left top;
 }
-.menuIcon rect:nth-child(3){
-  transform-origin: left bottom;
+
+.menuIcon rect:nth-child(3) {
+    transform-origin: left bottom;
 }
+
 .menuIcon rect.fadeOut {
-  opacity: 0;
+    opacity: 0;
 }
+
 .menuIcon rect.rotateUp {
-  transform: rotate(-45deg) translate(18px, 41px);
+    transform: rotate(-45deg) translate(18px, 41px);
 }
+
 .menuIcon rect.rotateDown {
-  transform: rotate(45deg) translate(17px, -14px);
+    transform: rotate(45deg) translate(17px, -14px);
 }
+
 #concertList {
-  display: grid;
-  grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 
-@media (min-width: 600px)  {
-  #concertList {
-    grid-template-columns: 1fr 1fr;
-  }
+@media (min-width: 600px) {
+    #concertList {
+        grid-template-columns: 1fr 1fr;
+    }
 
 }
 
-@media (min-width: 900px)  {
-  #concertList {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+@media (min-width: 900px) {
+    #concertList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
 }

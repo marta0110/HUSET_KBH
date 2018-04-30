@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box
+}
+
+;
+
 body,
 html {
     height: 100vh;
@@ -5,6 +11,7 @@ html {
 }
 
 /* intro */
+
 .header {
     background-image: url("pictures/app_music.png");
     height: 100vh;
@@ -24,26 +31,26 @@ html {
 }
 
 .header_intro .menu_arrow {
-     z-index: 10;
-    background-image: url(pictures/menu_up.png); 
-    width:60px;
-    height:auto;
+    z-index: 10;
+    background-image: url(pictures/menu_up.png);
+    width: 60px;
+    height: auto;
     background-repeat: no-repeat;
-     margin-top: 1em;
+    margin-top: 1em;
     margin-left: 1em;
-    transition: 0.2s ;
+    transition: 0.2s;
 }
 
 
-.header_intro .menu_arrow:hover{
-     z-index: 10;
-    background-image: url(pictures/menu_down.png); 
-    width:120px;
-    height:auto;
+.header_intro .menu_arrow:hover {
+    z-index: 10;
+    background-image: url(pictures/menu_down.png);
+    width: 120px;
+    height: auto;
     background-repeat: no-repeat;
     margin-top: 2em;
     cursor: pointer;
-    
+
 }
 
 
@@ -53,20 +60,20 @@ html {
     justify-self: start;
     cursor: pointer;
     position: absolute;
-    
+
 }
 
 .header_intro .gif {
     margin-top: 1em;
     margin-left: 10vw;
-    
-    
+
+
 }
 
 .categories_app {
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 6em;
+    margin-top: 6em;
 }
 
 
@@ -76,58 +83,66 @@ html {
     justify-self: end;
 
 }
-.menu_arrow_category .music{
-    background-image: url(pictures/music.png); 
+
+.menu_arrow_category .music {
+    background-image: url(pictures/music.png);
     background-repeat: no-repeat;
     cursor: pointer;
     transition: 0.2;
-   
+    height: 100px;
+
 }
 
-.menu_arrow_category img{
-    justify-self:center;
-    margin-top:-0.5vh;
+.menu_arrow_category img {
+    justify-self: center;
+    margin-top: -0.5vh;
 }
-.menu_arrow_category .films{
-    background-image: url(pictures/films.png); 
+
+.menu_arrow_category .films {
+    background-image: url(pictures/films.png);
     background-repeat: no-repeat;
     cursor: pointer;
     transition: 0.2;
-   
+    height: 100px;
+
 }
 
-.menu_arrow_category .films:hover{
-     background-image: url(pictures/films_hover.png);
-  
-    
+.menu_arrow_category .films:hover {
+    background-image: url(pictures/films_hover.png);
+
+
 }
-.menu_arrow_category .music:hover{
-     background-image: url(pictures/music_hover.png);
-    
-    
+
+.menu_arrow_category .music:hover {
+    background-image: url(pictures/music_hover.png);
+
+
 }
-.categories_app .category_gradient{
-    background-image: url(pictures/menu_button.png); 
-    width:65vw;
-    height:14vh;
+
+.categories_app .category_gradient {
+    background-image: url(pictures/menu_button.png);
+    width: 65vw;
+    height: 14vh;
     background-repeat: no-repeat;
     cursor: pointer;
     transition: 0.2;
     cursor: pointer;
     align-self: end;
 }
-.categories_app .category_gradient:hover{
-    background-image: url(pictures/menu_button_hover.png); width:65vw;
-    height:14vh;
+
+.categories_app .category_gradient:hover {
+    background-image: url(pictures/menu_button_hover.png);
+    width: 65vw;
+    height: 14vh;
     background-repeat: no-repeat;
-    
+
     cursor: pointer;
 }
 
 .categories_app .menu_arrow_category {
     display: grid;
     grid-template-columns: 40% 20% 40%;
-    margin-top: -8.5em;
+    margin-top: -5em;
 
 }
 
@@ -141,11 +156,9 @@ html {
 
 /*SIDE NAV*/
 
-
-
 .sidenav {
     height: 80%;
-    width: 20%;
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 20%;
@@ -154,8 +167,8 @@ html {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    text-align:center;
-   
+    text-align: center;
+
 }
 
 .sidenav a {
@@ -165,13 +178,15 @@ html {
     color: white;
     display: block;
     transition: 0.3s;
-    font-size:100;
-    font-family:"Avenir Next"; "Avenir Regular"; "sans-serif";
+    font-size: 100;
+    font-family: "Avenir Next";
+    "Avenir Regular";
+    "sans-serif";
     letter-spacing: 1px;
 
 }
 
-.sidenav a:hover{
+.sidenav a:hover {
     color: deeppink;
 }
 
@@ -184,96 +199,284 @@ html {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
+
+@media screen and (min-height: 700px) {
+
+    .header_intro {
+        display: grid;
+        grid-template-columns: 10% 65% 25%;
+    }
+    .header_intro .gif {
+        align-self: end;
+        margin-left: 20vw;
+
+    }
+
+    .categories_app .category_gradient {
+        margin-right: 0;
+        margin-left: 0;
+        height: 200px;
+
+    }
+}
+
+/* MUSIC APP MY PART */
+
+.music_body {
+    background: linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 3em;
+}
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+
+}
+
+.active,
+.dot:hover {
+    background-color: red;
+}
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
 
 /* APP */
-.concert {
-    border: 1px solid red;
-    padding: 1.5em;
-}
 
-.concert .color {
-    width: 100px;
-    height: 100px;
-    background-color: aquamarine;
-}
-
-.appbar {
-    width: 100vw;
-    height: var(--header-height);
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
-
-.appbar,
-.menu {
-    background: teal;
-    padding: 1em;
-    position: fixed;
-}
-
-.menu {
-    top: var(--header-height);
-    height: 100vh;
-    width: 100vw;
-    transition: all 0.3s 0.3s;
-    color: white;
-    top: 3em;
-}
-
-.menu ul li {
-    font-size: 2em;
-}
-
-.menu.hidden {
-    transform: translateX(-120vw);
-}
-
-.container-fluid {
-    margin: 1em;
-    margin-top: var(--header-height);
-}
-
-.menuIcon {
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 12px;
-}
-
-.menuIcon rect {
-    fill: white;
-    transition: all 0.6s;
-}
-
-.menuIcon rect:nth-child(1) {
-    transform-origin: left top;
-}
-
-.menuIcon rect:nth-child(3) {
-    transform-origin: left bottom;
-}
-
-.menuIcon rect.fadeOut {
-    opacity: 0;
-}
-
-.menuIcon rect.rotateUp {
-    transform: rotate(-45deg) translate(18px, 41px);
-}
-
-.menuIcon rect.rotateDown {
-    transform: rotate(45deg) translate(17px, -14px);
-}
-
-#concertList {
+.concert_list {
     display: grid;
     grid-template-columns: 1fr;
+    position: relative;
+    text-align: center;
+    color: white;
+   
 }
 
+#concertList .image_concert {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: hidden;
+    object-fit: cover;
+     opacity: 0.4;
+    cursor:pointer;
+}
+
+#concertList .image_concert:hover{
+    opacity: 1;
+   
+}
+
+.data_concert {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: absolute;
+    z-index: 20;
+}
+
+.data_concert .date_and_day {
+    padding-left: 1em;
+    padding-right: 2em;
+    align-content: flex-start;
+        
+}
+
+.data_concert .location {
+   justify-self: end;
+    
+}
+
+.data_concert .genre {
+     justify-self: end;
+    padding-right: 1em;
+ 
+}
+
+.descritpion_concert_stream {
+    display: grid;
+    grid-template-columns:50% 50%;
+    position: absolute;
+    margin-top: 6em;
+    margin-left: 1em;
+    z-index: 20;
+}
+
+.descritpion_concert_stream a{
+    text-decoration: none;
+     background:  linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid white;
+    z-index: 10;  
+}
+
+.descritpion_concert_stream a:hover{
+     background:  linear-gradient(-110deg, #73CFE8, #70B4D0, #6C90AF, #6E7393,#7D4050, #7D4050);
+}
+
+  .descritpion_concert_stream:hover + .image_concert{
+   opacity: 1;
+}
+
+
+.descritpion_concert_stream p{
+     justify-self: end;
+    padding-right: 1em;
+    
+}
+#concertList .image_concert img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#concertList h1 {
+    font-family: "Avenir Next Regular";
+    "Avenir Light";
+    "sans-serif";
+    color: white;
+    font-size: 1em;
+    font-size: 100;
+    letter-spacing: 1px;
+}
+
+#concertList h2 {
+    font-family: "Avenir Next Regular";
+    "Avenir Light";
+    "sans-serif";
+    color: white;
+    font-size: 1em;
+    font-size: 100;
+    letter-spacing: 1px;
+}
+
+
+ form{
+    display: inline-block;
+     width: 200px;
+   
+}
+select{
+
+      height: 50px;
+    font-family: "Avenir Next Regular";
+    "Avenir Light";
+    "sans-serif";
+     color: white;
+    font-size: 1.2em;
+    font-size: 100;
+    letter-spacing: 1px;
+     background:transparent;
+    
+}
+
+option {
+   background: purple;
+}
 
 @media (min-width: 600px) {
     #concertList {
@@ -286,5 +489,7 @@ html {
     #concertList {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+
 
 }

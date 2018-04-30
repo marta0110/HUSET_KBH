@@ -40,36 +40,23 @@ function showSingleConcert(aConcert) {
 
     let clone = template.cloneNode(true);
 
-
     clone.querySelector(".readmore").href = "subpage.html?id=" + aConcert.id;
+    clone.querySelector(".title").textContent = aConcert.title.rendered;
 
-    clone.querySelector("h1").textContent = aConcert.title.rendered;
-
-    clone.querySelector(".description").innerHTML = aConcert.content.rendered;
-
-    clone.querySelector(".price span").textContent = aConcert.acf.price;
+   
+  clone.querySelector(".genre").textContent = aConcert.acf.genre;
 
 
-    clone.querySelector(".genre").textContent = aConcert.acf.genre;
+ clone.querySelector(".location").textContent = aConcert.acf.location;
+
+ clone.querySelector(".weekday").textContent = aConcert.acf.week_day;
 
 
-    clone.querySelector(".location").textContent = aConcert.acf.location;
-
-
-    clone.querySelector(".time").textContent = aConcert.acf.time;
-
-
-    clone.querySelector(".weekday").textContent = aConcert.acf.week_day;
-
-
-    
-    
    var day = aConcert.acf.Date.substring(0,2);
     var month = aConcert.acf.Date.substring(2,4);
-    var year = aConcert.acf.Date.substring(4,8);
+    var year = aConcert.acf.Date.substring(6,8);
     
-    
-     clone.querySelector(".date").textContent = day + "." + month +"." + year;
+    clone.querySelector(".date").textContent = day + "." + month +"." + year;
     
 
     console.log(aConcert.acf.Date);
@@ -108,3 +95,21 @@ function bottomVisible() {
     const bottomOfPage = visible + scrollY >= pageHeight
     return bottomOfPage || pageHeight < visible
 }
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+
+}
+
+

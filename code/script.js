@@ -4,10 +4,6 @@ let lookingForData = false;
 function fetchConcerts() {
     /*lookingForData = true;
     fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?_embed&per_page=3&page=" + page)
-    
-    
-    
-    
         .then(e => e.json())
         .then(showConcerts)*/
     
@@ -33,6 +29,21 @@ function showConcerts(data) {
     lookingForData = false;
 }
 
+/*function showSlide(aConcert_slide){
+     let template_slide = document.querySelector("#concertTemplate_slide").content;
+    
+       let clone = template.cloneNode(true);
+    
+     clone.querySelector("img").setAttribute("src", aConcert._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+    
+     clone.querySelector(".title").textContent = aConcert.title.rendered;
+    
+      let concertList_slide = document.querySelector("#concertList_slide");
+    
+    concertList_slide.appendChild(clone);
+}
+
+*/
 function showSingleConcert(aConcert) {
 
     //console.log(aConcert);

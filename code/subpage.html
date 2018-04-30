@@ -17,33 +17,39 @@
     <title>HUSET KBH</title>
 </head>
 
+<body class="music_body">
 
-<body>
-    <header class="appBar">
-        <svg class="menuIcon" viewBox="0 0 100 100">
-       <rect = class="myRect" x="10" y="10" width="80" height="100" rx="5" ry="5"></rect>
-       <rect = class="myRect" x="10" y="10" width="80" height="100" rx="5" ry="5"></rect>
-       <rect = class="myRect" x="10" y="10" width="80" height="100" rx="5" ry="5"></rect>
+
+
+    <div class="header_intro">
+
+        <div class="menu_arrow" onmouseover="openNav()"></div>
+
+
+
+        <img class="gif" src="pictures/gif_ps.gif" alt="circle" style="width:250px;height:250px;">
+
+        <a href="index.html"> <img class="huset" src="pictures/huset_logo.png" alt="huset_logo" style="width:150px;height:150px;"></a>
+    </div>
+
+    <div onmouseleave="closeNav()" id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="music.html">Events</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+  
     
-   </svg>
-    </header>
-
-    <aside class="menu hidden">
-        <ul>
-            <li> menu</li>
-            <li> menu</li>
-            <li> menu</li>
-        </ul>
-
-
-    </aside>
+    
 
     <h1> Concerts</h1>
     <section id="singleConcerts">
         <header>
 
             <h1> Title </h1>
-            <img src="" alt="concert">
+            <img class="image_subpage" src="" alt="concert">
 
             <h2 class="price"><span>price</span> dkk</h2>
             <h2 class="genre"> Genre </h2>
@@ -60,7 +66,8 @@
 
 
 
-
+    <script src="menu.js"></script>
+    <script src="index.js"></script>
     <script src="subpage.js">
     </script>
 </body>

@@ -26,15 +26,15 @@
 
 
 
-    <div class="header_intro">
+    <div class="header_intro_music">
 
         <div class="menu_arrow" onmouseover="openNav()"></div>
 
+        <img class="music_logo" src="pictures/music_app.png" alt="music" style="width:120px;height:auto;">
 
+         <img class="gif_music" src="pictures/gif_ps.gif" alt="circle" style="width:180px;height:180px;">
 
-        <img class="gif" src="pictures/gif_ps.gif" alt="circle" style="width:250px;height:250px;">
-
-        <a href="index.html"> <img class="huset" src="pictures/huset_logo.png" alt="huset_logo" style="width:150px;height:150px;"></a>
+         <a href="index.html"> <img class="huset" src="pictures/huset_logo.png" alt="huset_logo" style="width:110px;height:110px;"></a>
     </div>
 
     <div onmouseleave="closeNav()" id="mySidenav" class="sidenav">
@@ -63,24 +63,17 @@
         </template>
     </section> 
       -->
+       <section id="SlideList">
+        <template class="slide_template">
 
         <div class="mySlides fade">
 
-            <img src="pictures/slideshow_picture_1.jpg" style="width:100%">
-            <div class="text">Caption Text</div>
+            <img src="">
+            <div class="text"></div>
         </div>
 
-        <div class="mySlides fade">
-
-            <img src="pictures/slideshow_picture_2.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-
-            <img src="pictures/slideshow_picture_3.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
-        </div>
+    </template>
+        </section>
 
 
 
@@ -104,23 +97,23 @@
     <h1> Concerts</h1>
 <div class="forms">
     
-<h1> Genre:</h1>
+<h2> Genre:</h2>
 <form action="/action_page.php">
       <select class="menu_select" name="date_event">
       </select>
       <br><br>
 </form>
 
-     <h2> Venue:</h2>
+<h2> Venue:</h2>
 <form action="/action_page.php">
-
-      <select class="menu_select_venue" name="date_event">
-      
-      </select>
-      <br><br>
+    <select class="menu_select_venue" name="date_event">
+    </select>
+    <br><br>
 </form>
 
-    
+<h2> Date:</h2>
+<input type="date" name="date" id="date">
+    <p class="select_buttom"> Select </p>
 </div>
 
 <section id="concertList">
@@ -141,12 +134,11 @@
        </div>
       
                  
- <div class="concert_list">
+<div class="concert_list">
      <div class="image_concert">
          <img src="" alt="concert">
      </div>
-           
-    </div>
+</div>
       
         </article>
         </template>

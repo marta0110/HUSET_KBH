@@ -1,13 +1,15 @@
 let page = 1;
 let lookingForData = false;
+let select_buttom = document.querySelector(".select_buttom");
 
+                                            
 function fetchConcerts() {
     /*lookingForData = true;
     fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?_embed&per_page=3&page=" + page)
         .then(e => e.json())
         .then(showConcerts)*/
     
-    lookingForData=true;
+  lookingForData=true;
 
   let urlParams = new URLSearchParams(window.location.search);
 
@@ -18,11 +20,30 @@ function fetchConcerts() {
   }
     fetch(endpoint)
       .then(e => e.json())
-      .then(showConcerts);
-    
-    
+      .then(showConcerts);  
 }
 
+function fetchSlideShow(){
+   
+ let endpoint = "http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?categories=21";
+ fetch(endpoint)
+      .then(e => e.json())
+      .then(showSlideShow);
+}
+function showSlideShow(data){
+    console.log(data);
+       data.forEach(showSingleSlide);     
+}
+function showSingleSlide(aSlide) {
+ 
+let template = document.querySelector(".slide_template").content;
+let clone = template.cloneNode(true);
+console.log(aSlide.link);  
+clone.querySelector("img").setAttribute("src", 
+aSlide._links["wp:featuredmedia"][0].href);   
+let SlideList = document.querySelector(".SlideList");
+SlideList.appendChild(clone);
+ }
 function showConcerts(data) {
     //console.log(data);
     data.forEach(showSingleConcert);
@@ -44,9 +65,22 @@ function showConcerts(data) {
 }
 
 */
+
+select_buttom.addEventListener("click", filterData);
+    
+function filterData(){
+    console.log(select_buttom.value);
+    
+let date = new Date(document.querySelector("#date").value);
+    console.log(date);
+    
+ console.log(document.querySelectorAll('[data-date]'));
+}
+
+   
 function showSingleConcert(aConcert) {
 
-    //console.log(aConcert);
+    
     let template = document.querySelector("#concertTemplate").content;
 
     let clone = template.cloneNode(true);
@@ -69,6 +103,9 @@ function showSingleConcert(aConcert) {
     
     clone.querySelector(".date").textContent = day + "." + month +"." + year;
     
+    clone.querySelector(".concert").setAttribute('data-date', new Date(aConcert.acf.Date.substring(4,8) + '/' + month +'/'+ day));
+    
+    
 
     console.log(aConcert.acf.Date);
 
@@ -77,7 +114,7 @@ function showSingleConcert(aConcert) {
     let concertList = document.querySelector("#concertList");
 
     if (aConcert._embedded["wp:featuredmedia"]) { //IMG IS THERE
-        clone.querySelector("img").setAttribute("src", aConcert._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+        clone.querySelector("img").setAttribute("src", aConcert._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url);
     } else { //NO IMG
         clone.querySelector("img").remove();
     }
@@ -88,6 +125,7 @@ concertList.appendChild(clone);
 
 
 fetchConcerts();
+fetchSlideShow();
 
 setInterval(function () {
 
@@ -108,6 +146,7 @@ function bottomVisible() {
 }
 
 var slideIndex = 0;
+
 showSlides();
 
 function showSlides() {
@@ -121,6 +160,6 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block"; 
     setTimeout(showSlides, 5000); // Change image every 2 seconds
 
-}
+} 
 
 

@@ -2,7 +2,7 @@
 <html lang="">
 
 <head>
-   
+ 
    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_package/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_package/favicon-16x16.png">
@@ -17,55 +17,62 @@
     <title>HUSET KBH</title>
 </head>
 
-<body class="music_body">
+<body class="subpage_body">
 
-
-
-    <div class="header_intro">
+  
+    <div class="header_intro_music">
 
         <div class="menu_arrow" onmouseover="openNav()"></div>
 
+        <img class="music_logo" src="pictures/music_app.png" alt="music" style="width:120px;height:auto;">
 
+        <img class="gif_music" src="pictures/gif_ps.gif" alt="circle" style="width:180px;height:180px;">
 
-        <img class="gif" src="pictures/gif_ps.gif" alt="circle" style="width:250px;height:250px;">
-
-        <a href="index.html"> <img class="huset" src="pictures/huset_logo.png" alt="huset_logo" style="width:150px;height:150px;"></a>
+         <a href="index.html"> <img class="huset" src="pictures/huset_logo.png" alt="huset_logo" style="width:110px;height:110px;"></a>
     </div>
+    
+ <section id="singleConcerts">
+ 
+    
+  <div class="image_subpage"></div>
+       
 
     <div onmouseleave="closeNav()" id="mySidenav" class="sidenav">
 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="music.html">Events</a>
+        <a href="#">Events</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
     </div>
 
-  
-    
-    
+<div class="arrow_white">
+       <a href="music.html">
+     <div class="menu_back">
+   </div> </a>
+   
+   </div>
+   
+   <div class="container_subpage">
 
-    <h1> Concerts</h1>
-    <section id="singleConcerts">
-        <header>
+        <h1> Title </h1>
+         <h2 class="weekday"> Weekday </h2>  
+          <h2 class="date"> date </h2>
+          <h2 class="location"> Location </h2>
 
-            <h1> Title </h1>
-            <img class="image_subpage" src="" alt="concert">
-
-            <h2 class="price"><span>price</span> dkk</h2>
-            <h2 class="genre"> Genre </h2>
-            <h2 class="location"> Location </h2>
             <h2 class="time"> Time </h2>
-            <h2 class="weekday"> Weekday </h2>
-            <h2 class="date"> date </h2>
-            <div class="color"></div>
+            <h2 class="price"><span>price</span> dkk</h2>
+            
+           
+           
+    
             <div class="description"> desription</div>
            
-
-        </header>
+  </div>
+    
     </section>
 
 
-
+ <script src="script.js"></script>
     <script src="menu.js"></script>
     <script src="index.js"></script>
     <script src="subpage.js">

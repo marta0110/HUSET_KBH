@@ -17,8 +17,7 @@ function showPosts(aPost) {
 
     document.querySelector(".price span").textContent = aPost.acf.price;
 
-    document.querySelector(".genre").textContent = aPost.acf.genre;
-
+   
     document.querySelector(".location").textContent = aPost.acf.location;
 
     document.querySelector(".time").textContent = aPost.acf.time;
@@ -27,13 +26,14 @@ function showPosts(aPost) {
 
  
     
-      var day = aPost.content.date;(0,2);
-    var month = aPost.content.date;(2,4);
-    var year = aPost.content.date;(6,8);
+      var day = aPost.acf.Date.substring(0,2);
+    var month = aPost.acf.Date.substring(2,4);
+    var year = aPost.acf.Date.substring(6,8);
     
     document.querySelector(".date").innerHTML = day + "." + month +"." + year;
     
 
-  document.querySelector(".image_subpage").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-
+  //document.querySelector(".image_subpage").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+    
+      document.querySelector(".image_subpage").style.backgroundImage = 'url('+ aPost._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url +')';
 }

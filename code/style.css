@@ -39,7 +39,7 @@ html {
 }
 
 .music_logo{
-    margin-left: 13vw;
+    margin-left: 17vw;
     
 }
 .header_intro .menu_arrow {
@@ -81,7 +81,7 @@ html {
     width: 120px;
     height: auto;
     background-repeat: no-repeat;
-    margin-top: 2em;
+    margin-top: 3em;
     cursor: pointer;
 
 }
@@ -652,7 +652,7 @@ input {
 .subpage_body{
     background:  linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
     width:100vw;
-    height: 100vh;
+    height: auto;
     background-size: cover;
     background-position: left;
    
@@ -687,29 +687,17 @@ input {
     transition: 0.2s;
 }
 
-@media (min-width: 600px) {
-    #concertList {
-        grid-template-columns: 1fr 1fr;
-    }
 
-}
-
-@media (min-width: 900px) {
-    #concertList {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-
-}
 
 /* Style inputs, select elements and textareas */
 input[type=text], select, textarea{
   width: 100%;
-  padding: 12px;
+  padding: 40px;
   border: 1px solid white;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+   
 }
 
 /* Style the label to display next to the inputs */
@@ -720,16 +708,21 @@ label {
 
 /* Style the submit button */
 input[type=submit] {
-background: linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
-  padding: 12px 20px;
-  border: 2px solid white;
+background: linear-gradient(150deg,
+    #6E7393, #7D4050, #7D4050);
+  padding: 16px 20px;
+  border: 4px solid white;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
+    
 }
 
 input[type=submit]:hover{
- background: linear-gradient(-1100deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);   
+ background: linear-gradient(-1100deg,
+     
+     #6C90AF, #6E7393, #7D4050, 
+     
+     #7D4050);   
 }
 
 /* Floating column for labels: 25% width */
@@ -754,13 +747,8 @@ input[type=submit]:hover{
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}/* Style inputs, select elements and textareas */
+
+/* Style inputs, select elements and textareas */
 input[type=text], select, textarea{
   width: 100%;
   padding: 12px;
@@ -795,11 +783,138 @@ input[type=submit] {
   padding: 20px;
 }
 
-.container_contact h1{
+.container_c.,contact h1{
  margin-left: 20vw;
     
 }
+.footer {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;   background: linear-gradient(#6C90AF, #70B4D0, #6BCDE7, #CDDCE2);
 
-.footer{
-    background-color: black;
+    }
+
+
+.footer .contact-us {
+    justify-content: center;
+    align-content: center;
+}
+
+.footer .contact-us h3 {
+  color: #fff;
+}
+
+.footer .contact-us p {
+    color: #fff;
+}
+
+.footer .social-media {
+ align-items: center;
+}
+
+.footer .social-media img{
+    width: 60%;
+    height: auto;
+}
+.logo_footer{
+        margin-left: 10vw;
+    }
+    
+ 
+}
+.footer .social-media .social-media-icons{
+ display: inline-block;
+    align-self: center;
+    justify-content: center;
+    margin-left: 10%;
+    cursor: pointer;
+    
+    
+}
+.footer .social-media .social-media-icons img{
+   
+   padding: 2%;
+    width: 15%;
+     height: auto;
+    margin-top: 5vh;
+}
+
+.footer .social-media p {
+    text-align: center;
+}
+
+.footer .address h3 {
+    color: #fff;
+}
+
+.footer .address p {
+    color: #fff;
+}
+ 
+.footer .social-media{
+        grid-area: 1;
+        padding-top: 10px;
+        padding-left: 80px;
+        padding-right: 80px;
+        cursor: pointer;
+    }
+    
+    .footer .contact-us, .footer .address{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+.image_music{
+       background-image: url("pictures/about.jpg");
+    height: 110vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1em;
+    opacity: 0.5;
+}
+
+.about{
+    
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.about .descritpion{
+     position: absolute;
+
+    
+  top: 0px;
+}
+
+@media (min-width: 600px) {
+    #concertList {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (min-width: 900px) {
+    #concertList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+}
+
+@media screen and (min-width: 700px) {
+.footer {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+   
+}
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }

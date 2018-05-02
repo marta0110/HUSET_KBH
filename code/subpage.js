@@ -15,12 +15,12 @@ function showPosts(aPost) {
 
     document.querySelector(".description").innerHTML = aPost.content.rendered;
 
-    document.querySelector(".price span").textContent = aPost.acf.price;
+    document.querySelector(".price span").textContent = "Price: " + aPost.acf.price;
 
    
     document.querySelector(".location").textContent = aPost.acf.location;
 
-    document.querySelector(".time").textContent = aPost.acf.time;
+    document.querySelector(".time").textContent = "Start: " + aPost.acf.time;
 
     document.querySelector(".weekday").textContent = aPost.acf.week_day;
 

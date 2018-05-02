@@ -32,55 +32,68 @@
          <a href="index.html"> <img class="huset" src="pictures/huset_logo.png" alt="huset_logo" style="width:110px;height:110px;"></a>
     </div>
     
- <section id="singleConcerts">
- 
-    
-  <div class="image_subpage"></div>
-       
-
-    <div onmouseleave="closeNav()" id="mySidenav" class="sidenav">
+       <div onmouseleave="closeNav()" id="mySidenav" class="sidenav">
 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="music.html">Events</a>
         <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="kontakt.html">Contact</a>
     </div>
 
-<div class="arrow_white">
-       <a href="music.html">
-     <div class="menu_back">
-   </div> </a>
    
-   </div>
+   <div class="container_contact">
+   <h1> Contact us</h1>
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">E-mail</label>
+      </div>
+      <div class="col-75">
+       <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Write your e-mail..">
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+  
+  <footer class="footer">
+     
+     
+      
+      
+      
+      
+  </footer>
    
-   <div class="container_subpage">
-
-        <h1> Title </h1>
-        
-       
-         <div class="grid_data">
-           <h2 class="weekday"> Weekday </h2>  
-          <h2 class="date"> date </h2>
-          <h2 class="location"> Location </h2>
-
-            <h2 class="time"> Time </h2>
-             
-            <h2 class="price"><span>price</span> dkk</h2>
-            
-            
-             <p><a class="buyticket" href="subpage.html?id=1"> buy ticket</a></p>
-             </div>
-           
-           
-    
-            <div class="description"> desription</div>
-           
-  </div>
-    
-    </section>
-
-
- <script src="script.js"></script>
+   <script src="script.js"></script>
     <script src="menu.js"></script>
     <script src="index.js"></script>
     <script src="subpage.js">

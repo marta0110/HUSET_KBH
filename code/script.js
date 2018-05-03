@@ -14,9 +14,9 @@ function fetchConcerts() {
   let urlParams = new URLSearchParams(window.location.search);
 
   let catid = urlParams.get("category");
-  let endpoint = "http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?_embed&per_page=2&page="+page
+  let endpoint = "http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?_embed&per_page=5&page="+page
   if(catid){ // DRY
-    endpoint = "http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?_embed&per_page=2&page="+page + "&categories="+catid
+    endpoint = "http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?_embed&per_page=5&page="+page + "&categories="+catid
   }
     fetch(endpoint)
       .then(e => e.json())
@@ -25,24 +25,24 @@ function fetchConcerts() {
 
 function fetchSlideShow(){
    
- let endpoint = "http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?categories=21";
+ let endpoint = "http://www.ailishkearns.com/wpt/wp-json/wp/v2/concerts?categories=21&_embed";
  fetch(endpoint)
       .then(e => e.json())
       .then(showSlideShow);
 }
 function showSlideShow(data){
     console.log(data);
-       data.forEach(showSingleSlide);     
+       data.forEach(showSingleSlide);   
+    showSlides();
 }
 function showSingleSlide(aSlide) {
  
-let template = document.querySelector(".slide_template").content;
-let clone = template.cloneNode(true);
-console.log(aSlide.link);  
-clone.querySelector("img").setAttribute("src", 
-aSlide._links["wp:featuredmedia"][0].href);   
-let SlideList = document.querySelector(".SlideList");
-SlideList.appendChild(clone);
+    let template = document.querySelector(".slide_template").content;
+    let clone = template.cloneNode(true);
+    console.log(aSlide);  
+    clone.querySelector("img").setAttribute("src", aSlide._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url);
+    let SlideList = document.querySelector("#SlideList");
+    SlideList.appendChild(clone);
  }
 function showConcerts(data) {
     //console.log(data);
@@ -66,7 +66,7 @@ function showConcerts(data) {
 
 */
 
-select_buttom.addEventListener("click", filterData);
+//select_buttom.addEventListener("click", filterData);
     
 function filterData(){
     console.log(select_buttom.value);
@@ -147,17 +147,20 @@ function bottomVisible() {
 
 var slideIndex = 0;
 
-showSlides();
+
 
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
+    console.log(slides)
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none"; 
     }
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1} 
-    slides[slideIndex-1].style.display = "block"; 
+    console.log(slideIndex)
+    if (slideIndex >= slides.length) {slideIndex = 0} 
+    console.log(slideIndex, slides.length)
+    slides[slideIndex].style.display = "block"; 
     setTimeout(showSlides, 5000); // Change image every 2 seconds
 
 } 

@@ -35,6 +35,7 @@ fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/categories?per_page=100")
         if(item.parent===12){
           let option = document.createElement("option");
             option.textContent=item.name
+            option.value=item.id
           /*let a = document.createElement("a");
           a.textContent = item.name;
           a.href="index.html?category=" + item.id;

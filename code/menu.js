@@ -16,11 +16,9 @@ fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/categories?per_page=100")
           let a = document.createElement("a");
           a.textContent = item.name;
           a.href="index.html?category=" + item.id;
-
           li.appendChild(a);
           parentElement.appendChild(li);
         }
-
     })
   }*/
     
@@ -39,7 +37,6 @@ fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/categories?per_page=100")
           /*let a = document.createElement("a");
           a.textContent = item.name;
           a.href="index.html?category=" + item.id;
-
           li.appendChild(a);*/
           parentElement.appendChild(option);
         }
@@ -60,7 +57,6 @@ fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/categories?per_page=100")
           /*let a = document.createElement("a");
           a.textContent = item.name;
           a.href="index.html?category=" + item.id;
-
           li.appendChild(a);*/
           parentElement_venue.appendChild(option_venue);
         }
@@ -76,7 +72,6 @@ fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/categories?per_page=100")
           /*let a = document.createElement("a");
           a.textContent = item.name;
           a.href="index.html?category=" + item.id;
-
           li.appendChild(a);
           parentElement_data.appendChild(option_data);  */
     
@@ -84,5 +79,3 @@ fetch("http://www.ailishkearns.com/wpt/wp-json/wp/v2/categories?per_page=100")
   }
     
   });  
-
-

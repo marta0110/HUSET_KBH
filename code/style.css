@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box
 }
@@ -30,41 +29,44 @@ html {
 
     display: grid;
     grid-template-columns: 30% 60%;
-     width:100%;
+    width: 100%;
     height: auto;
-    
-    
+
+
 }
+
 .header_intro_music {
     display: grid;
     grid-template-columns: 20% 35% 45%;
-    width:100%;
-    
-}
-.align_logo{
-    position: relative;
-    align-self: end;
-    justify-self:end;
+    width: 100%;
+
 }
 
-.align_logo_index{
+.align_logo {
     position: relative;
     align-self: end;
-    justify-self:end;
+    justify-self: end;
 }
 
-.align_logo_index a{
-       cursor: pointer;
+.align_logo_index {
+    position: relative;
+    align-self: end;
+    justify-self: end;
+}
+
+.align_logo_index a {
+    cursor: pointer;
     position: absolute;
-    top:1em;
-    right:8em;
+    top: 1em;
+    right: 8em;
 }
+
 .align_logo a {
     cursor: pointer;
     position: absolute;
-    top:3em;
-    left:2em;
-   
+    top: 3em;
+    left: 2em;
+
 
 }
 
@@ -134,15 +136,15 @@ html {
 
 .categories_app {
     margin-top: 6em;
-    width:100vw;
-  margin-right: 0;
-   
+    width: 100vw;
+    margin-right: 0;
+
 }
 
 
-.categories_app .category_gradient .arrow{
+.categories_app .category_gradient .arrow {
     justify-self: center;
-   margin-top: 10px;
+    margin-top: 10px;
 }
 
 
@@ -168,7 +170,7 @@ html {
     transition: 0.2;
     height: 100px;
     display: block;
-    
+
 
 }
 
@@ -187,9 +189,9 @@ html {
     cursor: pointer;
     display: grid;
     grid-template-columns: 40% 60%;
-     float:right;
- 
-    
+    float: right;
+
+
 }
 
 .categories_app .category_gradient:hover {
@@ -275,7 +277,7 @@ html {
 
     }
 
- .categories_app .category_gradient {
+    .categories_app .category_gradient {
         margin-right: 0;
         margin-left: 0;
         height: 200px;
@@ -293,10 +295,34 @@ html {
 /* Slideshow container */
 
 .slideshow-container {
-    max-width: 1000px;
+    width: 100vw;
     position: relative;
     margin: auto;
     margin-top: 3em;
+}
+
+.slideshow-container img {
+    width: 100vw;
+    height: auto;
+}
+
+.slideshow-container .text {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 80%;
+    background: rgba(120, 79, 103, 0.8);
+    font-family: "Avenir Next Regular";
+    "Avenir Light";
+    "sans-serif";
+    color: white;
+    font-size: 1.5em;
+    font-size: 100;
+    letter-spacing: 3px;
+}
+
+.find {
+    margin-left: 25vw;
 }
 
 /* Hide the images by default */
@@ -404,19 +430,19 @@ html {
     position: relative;
     text-align: center;
     color: white;
-      opacity: 0.4; 
+    opacity: 0.4;
 }
 
 #concertList .image_concert {
     width: 100%;
     max-height: 200px;
     overflow-y: hidden;
-    object-fit: cover; 
-    cursor:pointer;
+    object-fit: cover;
+    cursor: pointer;
 }
 
-.concert:hover .concert_list{
-    opacity:1;
+.concert:hover .concert_list {
+    opacity: 1;
 }
 
 .data_concert {
@@ -424,28 +450,28 @@ html {
     grid-template-columns: 1fr 1fr 1fr;
     position: absolute;
     z-index: 20;
-    width:100vw;
+    width: 100vw;
     height: auto;
 }
 
 .data_concert .date_and_day {
     padding-left: 1em;
     padding-right: 2em;
-    align-content: flex-start;     
+    align-content: flex-start;
 }
 
 .data_concert .location {
-   justify-self: center;  
+    justify-self: center;
 }
 
 .data_concert .genre {
-     justify-self: end;
+    justify-self: end;
     padding-right: 2em;
 }
 
 .descritpion_concert_stream {
     display: grid;
-    grid-template-columns:50% 50%;
+    grid-template-columns: 50% 50%;
     position: absolute;
     margin-top: 6em;
     margin-left: 1em;
@@ -453,44 +479,47 @@ html {
     width: 100vw;
 }
 
-.descritpion_concert_stream a{
+.descritpion_concert_stream a {
     text-decoration: none;
-     background:  linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
+    background: linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
     color: white;
     padding: 10px 20px;
     text-align: center;
     border: 1px solid white;
-    z-index: 10;  
+    z-index: 10;
 
 }
-.grid_data a{
-     text-decoration: none;
-     background:  linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
+
+.grid_data a {
+    text-decoration: none;
+    background: linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
     color: white;
     padding: 10px 20px;
     text-align: center;
     border: 1px solid white;
-    z-index: 10;   
+    z-index: 10;
 }
 
-.grid_data a:hover{
-         background:  linear-gradient(-110deg, #73CFE8, #70B4D0, #6C90AF, #6E7393,#7D4050, #7D4050);
-}
-.descritpion_concert_stream a:hover{
-     background:  linear-gradient(-110deg, #73CFE8, #70B4D0, #6C90AF, #6E7393,#7D4050, #7D4050);
+.grid_data a:hover {
+    background: linear-gradient(-110deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
 }
 
-  .descritpion_concert_stream:hover + .image_concert{
-   opacity: 1;
+.descritpion_concert_stream a:hover {
+    background: linear-gradient(-110deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
+}
+
+.descritpion_concert_stream:hover + .image_concert {
+    opacity: 1;
 }
 
 
-.descritpion_concert_stream p{
+.descritpion_concert_stream p {
     align-self: center;
-     
 
-    
+
+
 }
+
 #concertList .image_concert img {
     width: 100%;
     height: auto;
@@ -498,10 +527,11 @@ html {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
-.container_subpage h1{
-      font-family: "Avenir Next Regular";
+
+.container_subpage h1 {
+    font-family: "Avenir Next Regular";
     "Avenir Light";
     "sans-serif";
     color: white;
@@ -509,8 +539,9 @@ html {
     font-size: 100;
     letter-spacing: 1px;
 }
-.grid_data h1{
-       font-family: "Avenir Next Regular";
+
+.grid_data h1 {
+    font-family: "Avenir Next Regular";
     "Avenir Light";
     "sans-serif";
     color: white;
@@ -519,8 +550,8 @@ html {
     letter-spacing: 1px;
 }
 
-.grid_data h2{
-     font-family: "Avenir Next Regular";
+.grid_data h2 {
+    font-family: "Avenir Next Regular";
     "Avenir Light";
     "sans-serif";
     color: white;
@@ -529,8 +560,8 @@ html {
     letter-spacing: 1px;
 }
 
-.description{
-       font-family: "Avenir Next Regular";
+.description {
+    font-family: "Avenir Next Regular";
     "Avenir Light";
     "sans-serif";
     color: white;
@@ -538,6 +569,7 @@ html {
     font-size: 100;
     letter-spacing: 1px;
 }
+
 #concertList h1 {
     font-family: "Avenir Next Regular";
     "Avenir Light";
@@ -559,141 +591,150 @@ html {
 }
 
 
-.forms{
+.forms {
     display: inline-block;
-     display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-   
-     
-   
-}
-select{
 
-      height: 50px;
+
+
+}
+
+select {
+
+    height: 50px;
     font-family: "Avenir Next Regular";
     "Avenir Light";
     "sans-serif";
-     color: white;
+    color: white;
     font-size: 1.2em;
     font-size: 100;
     letter-spacing: 1px;
-     background:transparent;
-    
+    background: transparent;
+
 }
-.image_subpage{
+
+.image_subpage {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-      height: 100vh;
+    height: 100vh;
     width: 100vw;
     margin-top: 1vh;
-   
-  
-}
-#singleConcerts{
-     position: relative;
-     text-align: center;
- 
+
+
 }
 
-.grid_data{
+#singleConcerts {
+    position: relative;
+    text-align: center;
+
+}
+
+.grid_data {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.container_subpage{
+
+.container_subpage {
     position: absolute;
     top: 50vh;
-      width:100%;
+    width: 100%;
     height: auto;
-    background: rgba(120,79,103, 0.8);
+    background: rgba(120, 79, 103, 0.8);
 }
+
 option {
-   background: purple;
+    background: purple;
 }
 
 [type="date"] {
-  background: transparent url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+    background: transparent url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
 }
+
 [type="date"]::-webkit-inner-spin-button {
-  display: none;
+    display: none;
 }
+
 [type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* custom styles */
 
-
 input {
-  border: 1px solid #ccc;
-  background-color: transparent;
-        color: white;
-  padding: 3px 5px;
-  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
-  width: 190px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: white;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: auto;
     height: 50px;
     display: block;
     cursor: pointer;
     border-radius: 4px;
-        border-radius: 4px;
+    border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
 }
 
-.select_buttom{
-     text-decoration: none;
-     background:  linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
+.select_buttom {
+    text-decoration: none;
+    background: linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
     color: white;
     padding: 10px 20px;
     text-align: center;
     border: 1px solid white;
-    z-index: 10; 
+    z-index: 10;
     cursor: pointer;
+    width: 50vw;
+    margin-bottom: 3em;
 
 }
 
 
-.select_buttom:hover{
-     text-decoration: none;
-     background:  linear-gradient(#7D4050, #7D4050);
+.select_buttom:hover {
+    text-decoration: none;
+    background: linear-gradient(#7D4050, #7D4050);
     color: white;
     padding: 10px 20px;
     text-align: center;
     border: 1px solid white;
-    z-index: 10; 
+    z-index: 10;
 }
 
-.subpage_body{
-    background:  linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
-    width:100vw;
+.subpage_body {
+    background: linear-gradient(150deg, #73CFE8, #70B4D0, #6C90AF, #6E7393, #7D4050, #7D4050);
+    width: 100vw;
     height: auto;
     background-size: cover;
     background-position: left;
-   
+
 }
 
 
-.arrow_white{
+.arrow_white {
     position: absolute;
-      top: 1vh;
+    top: 1vh;
 }
-.menu_back{
 
-       background-image: url(pictures/arrow_white.png);
-     z-index: 100;
+.menu_back {
+
+    background-image: url(pictures/arrow_white.png);
+    z-index: 100;
     width: 13vw;
     height: 20vh;
     background-repeat: no-repeat;
     margin-left: 1em;
     transition: 0.2s;
     cursor: pointer;
-    
+
 }
 
-.menu_back:hover{
+.menu_back:hover {
 
-       background-image: url(pictures/arrow_white_hover.png);
-     z-index: 100;
+    background-image: url(pictures/arrow_white_hover.png);
+    z-index: 100;
     width: 20vw;
     height: 20vh;
     background-repeat: no-repeat;
@@ -704,123 +745,140 @@ input {
 
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
-  width: 100%;
-  padding: 40px;
-  border: 1px solid white;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-   
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 40px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+
 }
 
 /* Style the label to display next to the inputs */
+
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
 }
 
 /* Style the submit button */
+
 input[type=submit] {
-background: linear-gradient(150deg,
+    background: linear-gradient(150deg,
     #6E7393, #7D4050, #7D4050);
-  padding: 16px 20px;
-  border: 4px solid white;
-  border-radius: 4px;
-  cursor: pointer;
-    
+    padding: 16px 20px;
+    border: 4px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+
 }
 
-input[type=submit]:hover{
- background: linear-gradient(-1100deg,
-     
-     #6C90AF, #6E7393, #7D4050, 
-     
-     #7D4050);   
+input[type=submit]:hover {
+    background: linear-gradient(-1100deg,
+
+    #6C90AF, #6E7393, #7D4050,
+
+    #7D4050);
 }
 
 /* Floating column for labels: 25% width */
+
 .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+    float: left;
+    width: 25%;
+    margin-top: 6px;
 }
 
 /* Floating column for inputs: 75% width */
+
 .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+    float: left;
+    width: 75%;
+    margin-top: 6px;
     background-color: white;
 }
 
 /* Clear floats after the columns */
+
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-    color:white;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 /* Style the label to display next to the inputs */
+
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-   
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+
 }
 
 /* Style the submit button */
+
 input[type=submit] {
 
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
 }
 
 /* Style the container */
+
 .container_contact {
 
-  padding: 20px;
+    padding: 20px;
 }
 
-.container_c.,contact h1{
- margin-left: 20vw;
-    
+.container_c.,
+contact h1 {
+    margin-left: 20vw;
+
 }
+
 .footer {
-   width:100%;
-        display: grid;
-        grid-template-columns: 1fr;   background: linear-gradient(#6C90AF, #70B4D0, #6BCDE7, #CDDCE2);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: linear-gradient(#6C90AF, #70B4D0, #6BCDE7, #CDDCE2);
 
-    }
-
-.
-.footer_overlap{
-       width:100%;
-        display: grid;
-        grid-template-columns: 1fr;
 }
+
+. .footer_overlap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .footer .contact-us {
     justify-content: center;
     align-content: center;
 }
 
 .footer .contact-us h3 {
-  color: #fff;
+    color: #fff;
 }
 
 .footer .contact-us p {
@@ -828,33 +886,36 @@ input[type=submit] {
 }
 
 .footer .social-media {
- align-items: center;
+    align-items: center;
 }
 
-.footer .social-media img{
+.footer .social-media img {
     width: 60%;
     height: auto;
 }
-.logo_footer{
-        margin-left: 10vw;
-    }
-    
- 
+
+.logo_footer {
+    margin-left: 10vw;
 }
-.footer .social-media .social-media-icons{
- display: inline-block;
+
+
+}
+
+.footer .social-media .social-media-icons {
+    display: inline-block;
     align-self: center;
     justify-content: center;
     margin-left: 10%;
     cursor: pointer;
-    
-    
+
+
 }
-.footer .social-media .social-media-icons img{
-   
-   padding: 2%;
+
+.footer .social-media .social-media-icons img {
+
+    padding: 2%;
     width: 15%;
-     height: auto;
+    height: auto;
     margin-top: 5vh;
 }
 
@@ -869,22 +930,23 @@ input[type=submit] {
 .footer .address p {
     color: #fff;
 }
- 
-.footer .social-media{
-        grid-area: 1;
-        padding-top: 10px;
-        padding-left: 80px;
-        padding-right: 80px;
-        cursor: pointer;
-    }
-    
-    .footer .contact-us, .footer .address{
-        padding-left: 80px;
-        padding-right: 80px;
-    }
 
-.image_music{
-       background-image: url("pictures/about.jpg");
+.footer .social-media {
+    grid-area: 1;
+    padding-top: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    cursor: pointer;
+}
+
+.footer .contact-us,
+.footer .address {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.image_music {
+    background-image: url("pictures/about.jpg");
     height: 110vh;
     width: 100vw;
     background-position: center;
@@ -894,18 +956,18 @@ input[type=submit] {
     opacity: 0.5;
 }
 
-.about{
-    
+.about {
+
     position: relative;
     text-align: center;
     color: white;
 }
 
-.about .descritpion{
-     position: absolute;
+.about .descritpion {
+    position: absolute;
 
-    
-  top: 0px;
+
+    top: 0px;
 }
 
 @media (min-width: 600px) {
@@ -916,93 +978,135 @@ input[type=submit] {
 
 }
 
-@media (min-width: 900px) {  #concertList {
-        grid-template-columns: 1fr 1fr;
-   
-    }
-  
-   
-}
+
+
 
 @media screen and (min-width: 700px) {
-.footer {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-   
-}
-    .categories_app .category_gradient{
+    .footer {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+
+    }
+    .categories_app .category_gradient {
         display: grid;
         grid-template-columns: 20% 80%;
     }
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-}
 
-
-@media screen and (min-width: 900px){
-    
-    .header_intro {
-      display: grid;
-    grid-template-columns: 30% 60%;
-     width:90%;
-    height: auto;
-    
-}
-.header_intro_music {
-    display: grid;
-    grid-template-columns: 20% 30% 40%;
-    width:100%;
-    align-content: center;
-    
-}
-    .header_intro .menu_arrow{
-         margin-left: 10vw;
-        margin-top: 2em;
-    }  
-    .header_intro_music .menu_arrow{
-   margin-left: 10vw;
+    .forms {
+        margin-left: 10%;
+        margin-right: 10%;
+        align-content: center;
     }
-.align_logo{
-    position: relative;
-    align-self: center;
-    justify-self:center;;
+
+    .find {
+        margin-left: 40vw;
+    }
+
+    .header_intro_music {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        width: 90%;
+        align-content: center;
+        margin-right: 5%;
+    }
+
+    .header_intro_music .music_logo {
+        margin-top: 3em;
+        justify-self: end;
+    }
 }
 
-.align_logo a {
-    cursor: pointer;
-    position: absolute;
-    top:3em;
-    left:2em;
-   
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
 
 }
+
+
+@media screen and (min-width: 900px) {
     
-.categories_app .category_gradient {
-    background-image: url(pictures/menu_button.png);
-    width: 90vw;
-    height: 14vh;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: 0.2;
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: 10% 60%;
-    
-       float:right;
- 
-    
-}
+     .forms {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 
-.categories_app .category_gradient:hover {
-    background-image: url(pictures/menu_button_hover.png);
-    width: 90vw;
-    height: 14vh;
-    background-repeat: no-repeat;
+    .header_intro {
+        display: grid;
+        grid-template-columns: 30% 60%;
+        width: 90%;
+        height: auto;
 
-    cursor: pointer;
-}
-}
+    }
+    .header_intro_music {
+        display: grid;
+        grid-template-columns: 30% 50% 20%;
+        width: 90%;
+        align-content: center;
+
+    }
+
+    .header_intro_music .music_logo {
+        width: 200px;
+        height: 200px;
+    }
+    .header_intro .menu_arrow {
+        margin-left: 10vw;
+        margin-top: 2em;
+    }
+    .header_intro_music .menu_arrow {
+        margin-left: 10vw;
+    }
+    .align_logo {
+        position: relative;
+        align-self: center;
+        justify-self: center;
+        ;
+    }
+
+    .align_logo a {
+        cursor: pointer;
+        position: absolute;
+        top: 3em;
+        left: 2em;
+
+
+    }
+
+    .categories_app .category_gradient {
+        background-image: url(pictures/menu_button.png);
+        width: 90vw;
+        height: 14vh;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.2;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 10% 60%;
+
+        float: right;
+
+
+    }
+
+    .categories_app .category_gradient:hover {
+        background-image: url(pictures/menu_button_hover.png);
+        width: 90vw;
+        height: 14vh;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
+    }
+  
+
+  
+
+#concertList .image_concert {
+  
+    max-height: 300px;
+    }}
+

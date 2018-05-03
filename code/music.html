@@ -49,22 +49,8 @@
     <!-- Slideshow container -->
     <div class="slideshow-container">
 
-        <!-- Full-width images with number and caption text -->
-
-
-        <!--  <section id="concertList">
-
-    <template id="concertTemplate">
-  <div class="mySlides fade">
-
-    <img src="" "width:100%" alt="concert">
-    <div class="title" "text">  Title </div>
-   
-  </div>
-        </template>
-    </section> 
-      -->
-       <section id="SlideList">
+       
+  <section id="SlideList">
         <template class="slide_template">
 
         <div class="mySlides fade">
@@ -74,18 +60,7 @@
         </div>
 
     </template>
-        </section>
-
-
-
-
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+</section>
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -95,28 +70,30 @@
 
 
 
-    <h1> Concerts</h1>
+  <h1 class="find"> Find the event</h1>  
 <div class="forms">
     
-<h2> Genre:</h2>
-<form action="music.html" method="get">
-      <select class="menu_select" name="category">
-      </select>
-      <br><br>
-      <input type='submit' class="select_buttom" value='Select'>
-</form>
 
 <h2> Venue:</h2>
 <form action="/action_page.php">
     <select class="menu_select_venue" name="date_event">
     </select>
     <br><br>
+   
 </form>
+
+
 
 <h2> Date:</h2>
 <input type="date" name="date" id="date">
-<div class="hide_responsive"></div>
-    <p class="select_buttom"> Select </p>
+
+   <h2> Genre:</h2>
+<form action="music.html" method="get">
+      <select class="menu_select" name="category">
+      </select>
+      <br><br>
+      <input type='submit' class="select_buttom" value='Select'>
+</form>
 
 </div>
 <section id="concertList">

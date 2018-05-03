@@ -41,6 +41,10 @@ function showSingleSlide(aSlide) {
     let clone = template.cloneNode(true);
     console.log(aSlide);  
     clone.querySelector("img").setAttribute("src", aSlide._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url);
+    
+    
+     clone.querySelector(".text").textContent = aSlide.title.rendered;
+    
     let SlideList = document.querySelector("#SlideList");
     SlideList.appendChild(clone);
  }
@@ -50,23 +54,7 @@ function showConcerts(data) {
     lookingForData = false;
 }
 
-/*function showSlide(aConcert_slide){
-     let template_slide = document.querySelector("#concertTemplate_slide").content;
-    
-       let clone = template.cloneNode(true);
-    
-     clone.querySelector("img").setAttribute("src", aConcert._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-    
-     clone.querySelector(".title").textContent = aConcert.title.rendered;
-    
-      let concertList_slide = document.querySelector("#concertList_slide");
-    
-    concertList_slide.appendChild(clone);
-}
 
-*/
-
-//select_buttom.addEventListener("click", filterData);
     
 function filterData(){
     console.log(select_buttom.value);

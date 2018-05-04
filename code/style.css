@@ -863,30 +863,28 @@ contact h1 {
     display: grid;
     grid-template-columns: 1fr;
     background: linear-gradient(#6C90AF, #70B4D0, #6BCDE7, #CDDCE2);
+ 
 
 }
 
-. .footer_overlap {
+.footer_overlap {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
 }
 
 .footer .contact-us {
-    justify-content: center;
-    align-content: center;
+     font-family: "Arial Next", "sans-serif";
+    font-size: 1.5em;
+    justify-self: left;
+    color:white;
+      margin-left: 20%;
 }
 
-.footer .contact-us h3 {
-    color: #fff;
-}
-
-.footer .contact-us p {
-    color: #fff;
-}
 
 .footer .social-media {
     align-items: center;
+
 }
 
 .footer .social-media img {
@@ -897,9 +895,14 @@ contact h1 {
 .logo_footer {
     margin-left: 10vw;
 }
-
-
+.footer .adress{
+     font-family: "Arial Next", "sans-serif";
+    font-size: 1.5em;
+    justify-self: left;
+    color:white;
+    margin-left: 20%;
 }
+
 
 .footer .social-media .social-media-icons {
     display: inline-block;
@@ -921,15 +924,9 @@ contact h1 {
 
 .footer .social-media p {
     text-align: center;
+    font-family: "Arial Next", "sans-serif";
 }
 
-.footer .address h3 {
-    color: #fff;
-}
-
-.footer .address p {
-    color: #fff;
-}
 
 .footer .social-media {
     grid-area: 1;
@@ -939,11 +936,6 @@ contact h1 {
     cursor: pointer;
 }
 
-.footer .contact-us,
-.footer .address {
-    padding-left: 80px;
-    padding-right: 80px;
-}
 
 .image_music {
     background-image: url("pictures/about.jpg");
@@ -973,67 +965,107 @@ contact h1 {
 
 @media screen and (min-width: 700px) {
 
-  
-.concert_list {
-    display: grid;
-    grid-template-columns: 1fr;
-   position: relative;
-    width: 80%;
-    margin-left: 10%;
-}
+    .about {
+        width: 80%;
+        margin-left: 10%;
+    }
 
-.data_concert {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: absolute;
-    z-index: 20;
-    width: 80%;
-    height: auto;
-    position: absolute;
-    font-size: 1.5em;
-}
+    .about .image_music {
+        width: 100%;
+    }
+    .concert_list {
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .data_concert {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: absolute;
+        z-index: 20;
+        width: 80%;
+        height: auto;
+        position: absolute;
+        font-size: 1.5em;
+    }
 
 
-.descritpion_concert_stream {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    position: absolute;
-    margin-top: 4em;
-    margin-left: 0;
-    width: 80vw;
-      font-size: 1.5em;
-}
-    .descritpion_concert_stream .title{
+    .descritpion_concert_stream {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        position: absolute;
+        margin-top: 4em;
+        margin-left: 0;
+        width: 80vw;
+        font-size: 1.5em;
+    }
+    .descritpion_concert_stream .title {
         justify-self: start;
         margin-left: 10%;
-        
-    }
-    
-.next {
-    right: 6vw;
-    
-}
-    
-.prev {
-   left: 6vw;
-    
-}
 
-.slideshow-container img {
-   width: 80vw;
-    height: auto;
-    margin-left: 10vw;
-}
-    
-    .slideshow-container .text{
+    }
+
+    .next {
+        right: 6vw;
+
+    }
+
+    .prev {
+        left: 6vw;
+
+    }
+
+    .slideshow-container img {
         width: 80vw;
-        margin-left: 10vw; 
+        height: auto;
+        margin-left: 10vw;
+    }
+
+    .slideshow-container .text {
+        width: 80vw;
+        margin-left: 10vw;
     }
     .footer {
         display: grid;
         grid-template-columns: 30% 40% 30%;
 
     }
+    .footer .social-media {
+      grid-column: 2;
+    }
+
+    .footer .social-media-icons{
+     
+    }
+    .footer .adress {
+      grid-column: 1;
+    }
+
+    .footer .contact-us {
+        grid-column: 3;
+    }
+    
+    .footer .social-media .social-media-icons {
+    margin-left: 0%;
+   
+
+
+}
+ .footer .social-media .logo_footer{
+          margin-left: 20%;
+    }
+    
+.footer .social-media .social-media-icons img {
+
+    padding: 2%;
+    width: 17%;
+    height: auto;
+    margin-top: 5vh;
+}
+
     .categories_app .category_gradient {
         display: grid;
         grid-template-columns: 20% 80%;
@@ -1075,8 +1107,8 @@ contact h1 {
 
 
 @media screen and (min-width: 900px) {
-       
-     .forms {
+
+    .forms {
         margin-left: 20%;
         margin-right: 20%;
     }
@@ -1112,7 +1144,7 @@ contact h1 {
         position: relative;
         align-self: center;
         justify-self: center;
-        
+
     }
 
     .align_logo a {
@@ -1145,6 +1177,62 @@ contact h1 {
         cursor: pointer;
     }
 
+}
+
+@media screen and (min-width: 1200px) {
+
+ .footer{
+        display: grid;
+        grid-auto-columns: 1fr 1fr 1fr;
+       width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .footer .adress{
+        margin-top: 1em;
+        justify-self:center;
+    }
+
+    .footer .contact-us{
+       margin-top: 1em;
+        justify-self:start;
+         margin-right: 10%;
+        
+    }
+ .footer .social-media .logo_footer{
+          margin-left: 10%;
+     width:100%;
+    }
+    
+.footer .social-media .social-media-icons img {
+
+    width: 17%;
+    height: auto;
+  
+}
 
 }
 
+@media screen and (min-width: 1500px) {
+    
+
+     .footer .social-media .logo_footer{
+          margin-left: 10%;
+     width:70%;
+    }
+    
+    .footer .social-media .social-media-icons img {
+
+    width: 15%;
+    height: auto;
+  
+}
+     .footer .contact-us{
+       margin-top: 1em;
+        justify-self:start;
+         margin-right: 5vw;
+        
+    }
+}
+    
+    

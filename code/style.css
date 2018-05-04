@@ -970,18 +970,65 @@ contact h1 {
     top: 0px;
 }
 
-@media (min-width: 600px) {
-    #concertList {
-        grid-template-columns: 1fr 1fr;
-    }
 
+@media screen and (min-width: 700px) {
 
+  
+.concert_list {
+    display: grid;
+    grid-template-columns: 1fr;
+   position: relative;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.data_concert {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: absolute;
+    z-index: 20;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    font-size: 1.5em;
 }
 
 
+.descritpion_concert_stream {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: absolute;
+    margin-top: 4em;
+    margin-left: 0;
+    width: 80vw;
+      font-size: 1.5em;
+}
+    .descritpion_concert_stream .title{
+        justify-self: start;
+        margin-left: 10%;
+        
+    }
+    
+.next {
+    right: 6vw;
+    
+}
+    
+.prev {
+   left: 6vw;
+    
+}
 
-
-@media screen and (min-width: 700px) {
+.slideshow-container img {
+   width: 80vw;
+    height: auto;
+    margin-left: 10vw;
+}
+    
+    .slideshow-container .text{
+        width: 80vw;
+        margin-left: 10vw; 
+    }
     .footer {
         display: grid;
         grid-template-columns: 30% 40% 30%;
@@ -1025,11 +1072,10 @@ contact h1 {
     }
 }
 
-}
 
 
 @media screen and (min-width: 900px) {
-    
+       
      .forms {
         margin-left: 20%;
         margin-right: 20%;
@@ -1059,13 +1105,14 @@ contact h1 {
         margin-top: 2em;
     }
     .header_intro_music .menu_arrow {
-        margin-left: 10vw;
+        margin-left: 11vw;
+        margin-top: 2em;
     }
     .align_logo {
         position: relative;
         align-self: center;
         justify-self: center;
-        ;
+        
     }
 
     .align_logo a {
@@ -1073,8 +1120,6 @@ contact h1 {
         position: absolute;
         top: 3em;
         left: 2em;
-
-
     }
 
     .categories_app .category_gradient {
@@ -1087,7 +1132,6 @@ contact h1 {
         cursor: pointer;
         display: grid;
         grid-template-columns: 10% 60%;
-
         float: right;
 
 
@@ -1098,15 +1142,9 @@ contact h1 {
         width: 90vw;
         height: 14vh;
         background-repeat: no-repeat;
-
         cursor: pointer;
     }
-  
 
-  
 
-#concertList .image_concert {
-  
-    max-height: 300px;
-    }}
+}
 
